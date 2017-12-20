@@ -1,0 +1,68 @@
+@import '../mixins/**.pcss';
+
+#gh-event-feed {
+  height: 450px;
+  width: 100%;
+  overflow: auto;
+  border: 0;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.3);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  @media (--xs) {
+    display: block;
+    padding: 15px;
+  }
+  @media (--gt-xs) {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .gha-header {
+    display: none;
+  }
+  .gha-gravatar-user .gha-gravatar-small {
+    border-radius: 50%;
+    border: 0;
+    box-shadow: 0px 1px 3px #424242;
+  }
+  .gha-feed {
+    border: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--primary);
+  }
+  .gha-user-info a, .gha-user-info p a, .gha-feed a, .gha-feed small {
+    color: white;
+    font-family: 'Comfortaa', 'Helvetica', 'sans-serif';
+  }
+  .gha-activity {
+    background: var(--primary);
+    color: var(--accent);
+    border: 0;
+  }
+  .gha-time {
+    color: var(--grey3);
+  }
+  .gha-push {
+    display: none;
+    background: var(--primary);
+  }
+  .gha-push-small {
+    display: none;
+  }
+  .gha-footer {
+    display: none;
+  }
+}
+.octicon-mark-github:before, .octicon-comment-discussion:before, .octicon-git-commit:before, .octicon-repo-delete:before, .octicon-repo:before {
+    color: white;
+  }
