@@ -134,6 +134,9 @@ module Home::Components
   private def home_contact_section
     section id: "home-contact" do
       h2 "Get in touch"
+
+      para "Reach me at hello@mikias.net"
+      # render_contact_form
     end
   end
 
@@ -143,6 +146,30 @@ module Home::Components
     section id: "home-blog" do
       h2 "Blog"
       latest_posts
+    end
+  end
+
+
+  private def render_contact_form
+    form class: "home-contact-form" do
+      div class: "form-row" do
+        label "Name"
+        input type: "text"
+      end
+
+      div class: "form-col" do
+        label "Email"
+        input type: "email"
+      end
+
+      div class: "form-row" do
+        label "Message"
+        textarea
+      end
+
+      div class: "submit" do
+        submit "Submit"
+      end
     end
   end
 

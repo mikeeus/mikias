@@ -13,20 +13,14 @@ class Home::IndexPage < MainLayout
       span class: "home-splash-overlay"
       div class: "home-splash-text" do
         text "Mikias Abera"
+        para "hello@mikias.net"
       end
     end
 
     home_intro_section
     home_github_activity_section
     home_blog_section
-
-
-    div class: "divider-activity-tools"
-
     home_tools_section
-
-    div class: "divider-tools-projects"
-
     home_contact_section
   end
 end
