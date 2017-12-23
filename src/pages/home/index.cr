@@ -1,6 +1,5 @@
 class Home::IndexPage < MainLayout
-  include Blog::Latest::Components
-  include Github::Components
+  include Home::Components
 
   def inner_head
     css_link asset("css/octicons.min.css")
@@ -16,17 +15,18 @@ class Home::IndexPage < MainLayout
         text "Mikias Abera"
       end
     end
-    section id: "home-intro" do
-      div "My name is Mikias Abera. I'm passionate about the power of technology to solve problems. Currently hacking in Ruby, Typescript and Crystal. You'll find me either in Toronto, Canada or Addis Ababa, Ethiopia."
-    end
-    section id: "home-blog" do
-      latest_posts
-    end
-    section id: "home-activity" do
-      github_events
-    end
-    section id: "home-skills" do
-      div "SKILLS"
-    end
+
+    home_intro_section
+    home_github_activity_section
+    home_blog_section
+
+
+    div class: "divider-activity-tools"
+
+    home_tools_section
+
+    div class: "divider-tools-projects"
+
+    home_contact_section
   end
 end

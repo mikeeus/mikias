@@ -1,0 +1,217 @@
+@import '../variables/*.pcss';
+@import '../mixins/*.pcss';
+
+
+/* HOME */
+#home-splash {
+  width: 100%;
+  height: 450px;
+  background-image: url('/images/home-splash.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  @apply --blur;
+  position: relative;
+  .home-splash-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(12, 29, 36, 0.93);
+  }
+  .home-splash-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 450px;
+    color: white;
+    font-weight: 700;
+    font-size: 36px;
+  }
+}
+
+#home-intro, #home-blog, #home-activity, #home-tools, #home-contact {
+  position: relative;
+  h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+  @media (--xs) {
+    padding: 150px 15px;
+  }
+  @media (--gt-xs) {
+    padding: 150px 30px;
+  }
+  .skewed-top, .skewed-bottom {
+    position: absolute;
+    height: 150px;
+    width: 100%;
+    left: 0;
+  }
+  .skewed-top {
+    top: -75px;
+    transform: skew(0, 4deg);
+  }
+  .skewed-bottom {
+    bottom: -75px;
+    transform: skew(0, -4deg);
+  }
+}
+
+#home-intro {
+  font-size: 20px;
+  padding: 75px 15px 150px;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      margin-bottom: 30px;
+      border-left: 5px solid orange;
+      padding: 10px 0 0 60px;
+      transition: all 200ms ease-in-out;
+      position: relative;
+      strong {
+        color: var(--secondary);
+      }
+      i {
+        position: absolute;
+        left: -50px;
+        top: 50%;
+        transform: translate(0, -50%);
+        font-size: 30px;
+        font-weight: bold;
+        color: transparent;
+        width: 50px;
+        text-align: center;
+      }
+      &:hover {
+        border-width: 50px;
+        padding-left: 15px;
+        i {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+#home-blog {
+  margin-bottom: 60px;
+  h2 {
+    color: var(--primary);
+  }
+}
+
+#home-activity {
+  background: var(--primary);
+  position: relative;
+  .skewed-top {
+    background: var(--primary);
+  }
+  .skewed-bottom {
+    background: var(--primary);
+  }
+  h2 {
+    text-align: center;
+    color: white;
+  }
+  .gha-header {
+    position: relative;
+    background: var(--primary);
+    border-color: var(--primary);
+    border: 0;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 600px;
+    height: 100px;
+    padding: 30px 15px;
+    margin: -5px auto 4px;
+    -webkit-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .3);
+    .gha-github-icon .octicon {
+      margin-top: -3px;
+    }
+    .gha-user-info {
+      @media (--xs) {
+        a {
+          font-size: 18px;
+        }
+        p {
+          font-sie: 14px;
+        }
+      }
+    }
+    .gha-gravatar {
+      @media (--xs) {
+        margin-right: 5px;
+        padding: 0;
+      }
+    }
+  }
+  .gha-user-info a {
+    color: white;
+  }
+  .gha-user-info p {
+    margin: 0;
+  }
+  .gha-gravatar img {
+    border-radius: 50%;
+    border: 0;
+    -webkit-box-shadow: 0px 1px 3px #424242;
+    box-shadow: 0px 1px 3px #424242;
+  }
+}
+
+#home-tools {
+  background: var(--secondary);
+  color: white;
+  font-weight: bold;
+  .skewed-top {
+    background: var(--secondary);
+  }
+  .skewed-bottom {
+    background: var(--secondary);
+  }
+  h2 {
+    color: white;
+  }
+  .home-tools, .home-languages {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .home-tool, .home-lang {
+    flex: 1;
+    display: inline-block;
+    padding: 15px;
+    background: #ffffff26;
+    border-radius: 3px;
+    width: 200px;
+    margin: 0 10px 10px 0;
+    min-width: 200px;
+    max-width: 260px;
+    img {
+      height: 50px;
+      width: 50px;
+      display: inline-block;
+    }
+    div {
+      float: right;
+      margin-top: 5px;
+      display: inline-block;
+      width: 150px;
+      padding-left: 15px;
+      box-sizing: border-box;
+      strong {
+        line-height: 50px;
+      }
+    }
+  }
+}

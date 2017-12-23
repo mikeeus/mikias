@@ -48,6 +48,13 @@
     background: var(--primary);
     color: var(--accent);
     border: 0;
+    .gha-activity-icon .octicon {
+      color: white;
+    }
+  }
+  .gha-message {
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .gha-time {
     color: var(--grey3);
@@ -63,6 +70,7 @@
     display: none;
   }
 }
+
 .octicon-mark-github:before, .octicon-comment-discussion:before, .octicon-git-commit:before, .octicon-repo-delete:before, .octicon-repo:before {
     color: white;
   }
