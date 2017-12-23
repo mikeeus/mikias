@@ -14,6 +14,14 @@ class Home::IndexPage < MainLayout
       div class: "home-splash-text" do
         text "Mikias Abera"
         para "hello@mikias.net"
+        div class: "home-splash-social" do
+          link to: "https://github.com/mikeeus" do
+            img src: "/images/icons/github.svg"
+          end
+          link to: "https://www.linkedin.com/in/mikeeus" do
+            img src: "/images/icons/linkedin.png"
+          end
+        end
       end
     end
 
