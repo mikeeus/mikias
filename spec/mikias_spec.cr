@@ -8,17 +8,19 @@ describe "Mikias" do
       visitor.should contain "<title>Mikias Abera</title>"
     end
 
-    # it "shows posts" do
-    #   insert_post title: "Sample post"
-    #   insert_post title: "Lorem ipsum"
+    it "shows latest posts" do
+      insert_post title: "First"
+      insert_post title: "Second"
+      insert_post title: "Third"
+      insert_post title: "Fourth"
 
-    #   visitor = AppVisitor.new
+      visitor = AppVisitor.new
 
-    #   visitor.visit("/")
+      visitor.visit("/")
 
-    #   visitor.should contain "Sample post<a href=\"/posts/sample-post\">#</a>"
-    #   visitor.should contain "Lorem ipsum<a href=\"/posts/lorem-ipsum\">#</a>"
-    # end
+      visitor.should contain "<h2>Latest Posts</h2>"
+      # visitor.should contain "Lorem ipsum<a href=\"/posts/lorem-ipsum\">#</a>"
+    end
   end
 
   # describe "/blog/posts/new" do

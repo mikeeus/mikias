@@ -144,7 +144,7 @@ module Home::Components
     div class: "divider-blog-activity"
 
     section id: "home-blog" do
-      h2 "Blog"
+      h2 "Latest Posts"
       latest_posts
     end
   end
