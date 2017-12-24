@@ -38,11 +38,6 @@ module Github::Components
           // limit: 20 // optional
           // repository: "", // optional
         });
-        new SimpleBar(document.getElementById('gh-event-feed'));
-        // var ps = new PerfectScrollbar('#gh-event-feed', {
-        //   suppressScrollx: true,
-        //   scrollXMarginOffset: 10
-        // });
       )
     end
   end

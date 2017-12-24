@@ -25,8 +25,6 @@ abstract class MainLayout
         meta name: "viewport", content: "width=device-width, initial-scale=1"
         css_link asset("css/app.css")
         js_link asset("js/app.js")
-        js_link asset("js/simplebar.js")
-        css_link asset("css/simplebar.css")
         inner_head
       end
 
