@@ -22,7 +22,7 @@ shards:
 
   lucky_inflector:
     github: luckyframework/lucky_inflector
-    commit: 704287a587e04e90e7843938a1613168a98aa509
+    commit: d3b814aa5d3a6a18441b724e327634502bf7e37f
 
   lucky_migrator:
     github: luckyframework/lucky_migrator
