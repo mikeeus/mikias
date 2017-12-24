@@ -14,12 +14,10 @@
   overflow-y: auto;
   @media (--xs) {
     display: block;
-    padding: 15px;
   }
   @media (--gt-xs) {
     max-width: 600px;
     margin: auto;
-    padding: 20px;
     box-sizing: border-box;
   }
   .gha-header {
@@ -33,9 +31,6 @@
   }
   .gha-feed {
     border: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
     padding: 15px;
     width: 100%;
     box-sizing: border-box;
@@ -56,6 +51,9 @@
   .gha-message {
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .gha-message-merge {
+    background: #303F9F;
   }
   .gha-time {
     color: var(--grey3);
