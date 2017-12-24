@@ -31,9 +31,7 @@ exports.plugins = {
       require("precss"),
       require("lost"),
       require("postcss-cssnext")(),
-      require("postcss-sass-color-functions"),
-      require("postcss-nested"),
-      require('postcss-custom-properties')
+      require("postcss-sass-color-functions")
     ]
   }
 }
