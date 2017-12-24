@@ -1,10 +1,14 @@
 class PostQuery < Post::BaseQuery
   def latest
-    published_at.lte(Time.now).published_at.desc_order.limit(5)
+    published.published_at.desc_order.limit(5)
+  end
+
+  def published
+    published_at.lte(Time.now)
   end
 
   def find_published_by_slug(slug : String) : Post
-    post = title.lower.is(titlelize(slug)).first? ||
+    post = published.title.lower.is(titlelize(slug)).first? ||
       raise LuckyRecord::RecordNotFoundError.new(:post, slug)
   end
 
