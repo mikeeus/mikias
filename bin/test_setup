@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Exit if any subcommand fails
+set -e
+
+LUCKY_ENV="test"
+
+lucky db.drop
+lucky db.create
+lucky db.migrate
