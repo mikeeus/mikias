@@ -12,6 +12,7 @@ class Home::IndexPage < MainLayout
     change_header_on_scroll_script
 
     section id: "home-splash" do
+      img src: asset("images/home-splash.jpeg")
       span class: "home-splash-overlay"
       div class: "home-splash-text" do
         text "Mikias Abera"

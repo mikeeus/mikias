@@ -17,11 +17,11 @@ module Home::Components
           strong "Self motivated,"
           text " to push myself and grow daily."
         end
-        li do
-          material_icon("hotel")
-          strong "Polyphasic sleeper,"
-          text " not afraid to test the 'limits'."
-        end
+        # li do
+        #   material_icon("hotel")
+        #   strong "Polyphasic sleeper,"
+        #   text " not afraid to test the 'limits'."
+        # end
         li do
           material_icon("flight")
           text "Can be found in "
