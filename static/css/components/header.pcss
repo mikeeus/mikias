@@ -7,6 +7,7 @@
   left: 0;
   z-index: 1;
   width: 100%;
+  background: white;
   box-sizing: border-box;
   padding: 10px;
   display: flex;
@@ -20,7 +21,7 @@
     padding: 0 10px;
     font-weight: 700;
     font-size: 22px;
-    color: white;
+    color: var(--primary);
   }
   ul {
     list-style-type: none;
@@ -29,9 +30,15 @@
     li {
       display: inline-block;
       a {
-        color: white;
+        color: var(--primary);
       }
     }
+  }
+}
+.home-nav {
+  background: transparent;
+  .brand, ul li a {
+    color: white;
   }
 }
 .past-main {
