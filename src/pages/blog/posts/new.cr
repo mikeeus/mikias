@@ -2,8 +2,8 @@ class Blog::Posts::NewPage < MainLayout
   needs post_form : PostForm
 
   def inner_head
-    css_link "https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css"
-    js_link "https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"
+    css_link "/css/simplemde.min.css"
+    js_link "/js/simplemde.min.js"
     raw "<script>document.addEventListener('DOMContentLoaded', function() { var simplemde = new SimpleMDE(); }, false);</script>"
   end
 
@@ -32,6 +32,19 @@ class Blog::Posts::NewPage < MainLayout
         label_for f.tags
         text_input f.tags
         errors_for f.tags
+      end
+
+
+      div class: "form-row" do
+        label_for f.published_at
+        text_input f.published_at
+        errors_for f.published_at
+      end
+
+      div class: "form-row" do
+        label_for f.comment_id
+        text_input f.comment_id
+        errors_for f.comment_id
       end
 
       submit "Save Post"
