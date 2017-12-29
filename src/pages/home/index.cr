@@ -6,6 +6,7 @@ class Home::IndexPage < MainLayout
     css_link asset("css/github-activity-0.1.5.min.css")
     js_link asset("js/mustache.min.js")
     js_link asset("js/github-activity-0.1.5.min.js")
+    change_header_on_scroll_script
   end
 
   def inner
@@ -30,5 +31,30 @@ class Home::IndexPage < MainLayout
     home_blog_section
     home_tools_section
     home_contact_section
+  end
+
+  private def change_header_on_scroll_script
+    script do
+      raw %(
+        $(document).ready(function() {
+          var mainbottom = $('.home-splash-overlay').offset().top + $('.home-splash-overlay').height();
+
+          // on scroll,
+          $(window).on('scroll',function(){
+
+              // we round here to reduce a little workload
+              var stop = Math.round($(window).scrollTop());
+              console.log('stop: ', stop);
+              console.log('mainbottom: ', mainbottom);
+              if (stop > mainbottom) {
+                  $('.nav').addClass('past-main');
+              } else {
+                  $('.nav').removeClass('past-main');
+              }
+
+          });
+        })
+      )
+    end
   end
 end
