@@ -14,7 +14,7 @@ module Posts::Latest::Components
     header do
       span post.published_string
     end
-    h2 post.title
+    h3 post.title
     para post.preview
     footer do
       material_icon("arrow_forward")

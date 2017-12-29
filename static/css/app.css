@@ -27,6 +27,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #content-container {
+  padding-top: 68px;
   width: 100%;
   margin: auto;
   box-sizing: border-box;
