@@ -40,15 +40,8 @@ class Posts::NewPage < MainLayout
         errors_for f.tags
       end
 
-
       div class: "form-row" do
-        label_for f.published_at
-        text_input f.published_at
-        errors_for f.published_at
-      end
-
-      div class: "form-row" do
-        label_for f.comment_id
+        label "Comments Thread"
         text_input f.comment_id
         errors_for f.comment_id
       end
