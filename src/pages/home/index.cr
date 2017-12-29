@@ -37,24 +37,26 @@ class Home::IndexPage < MainLayout
   private def change_header_on_scroll_script
     script do
       raw %(
-        $('.nav').addClass('home-nav');
-        var homeOverlay = $('.home-splash-overlay');
-        var mainbottom = homeOverlay.offset().top + homeOverlay.height();
+        $(document).ready(function() {
+          $('.nav').addClass('home-nav');
+          var homeSplash = $('#home-splash');
+          var mainbottom = homeSplash.offset().top + homeSplash.height();
 
-        // on scroll,
-        if (homeOverlay) {
-          $(window).on('scroll',function(){
+          // on scroll,
+          if (homeSplash) {
+            $(window).on('scroll',function(){
 
-            // we round here to reduce a little workload
-            var stop = Math.round($(window).scrollTop());
-            if (stop > mainbottom) {
-                $('.home-nav').addClass('past-main');
-            } else {
-                $('.home-nav').removeClass('past-main');
-            }
+              // we round here to reduce a little workload
+              var stop = Math.round($(window).scrollTop());
+              if (stop > mainbottom) {
+                  $('.home-nav').addClass('past-main');
+              } else {
+                  $('.home-nav').removeClass('past-main');
+              }
 
-          });
-        }
+            });
+          }
+        });
       )
     end
   end

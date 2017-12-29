@@ -4,12 +4,18 @@ class Blog::Posts::NewPage < MainLayout
   def inner_head
     css_link "/css/simplemde.min.css"
     js_link "/js/simplemde.min.js"
-    raw "<script>document.addEventListener('DOMContentLoaded', function() { var simplemde = new SimpleMDE(); }, false);</script>"
+    initialize_simplemde
   end
 
   def inner
     section class: "post-editor form-container" do
       render_post_form(@post_form)
+    end
+  end
+
+  private def initialize_simplemde
+    script do
+      raw "document.addEventListener('DOMContentLoaded', function() { var simplemde = new SimpleMDE(); }, false);"
     end
   end
 
