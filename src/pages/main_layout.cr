@@ -25,13 +25,14 @@ abstract class MainLayout
         meta name: "viewport", content: "width=device-width, initial-scale=1"
         css_link asset("css/app.css")
         js_link asset("js/app.js")
+        js_link asset("js/jquery-3.2.1.min.js")
         inner_head
       end
 
       body do
         layout_header "ma", blog: "/blog"
         render_flash
-        div class: "content-container" do
+        div id: "content-container" do
           inner
         end
       end
