@@ -1,4 +1,4 @@
-class Blog::Index < BrowserAction
+class Posts::Index < BrowserAction
   action do
     posts = PostQuery.new.latest.results
     render posts: posts

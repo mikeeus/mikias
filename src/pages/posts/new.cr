@@ -1,4 +1,4 @@
-class Blog::Posts::NewPage < MainLayout
+class Posts::NewPage < MainLayout
   needs post_form : PostForm
 
   def inner_head
@@ -20,7 +20,7 @@ class Blog::Posts::NewPage < MainLayout
   end
 
   private def render_post_form(f)
-    form_for Blog::Posts::Create, class: "m-form" do
+    form_for Posts::Create, class: "m-form" do
       h1 "New post"
       div class: "form-row" do
         label_for f.title

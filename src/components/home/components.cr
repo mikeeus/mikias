@@ -1,6 +1,8 @@
+require "../posts/**"
+
 module Home::Components
   include Github::Components
-  include Blog::Latest::Components
+  include Posts::Latest::Components
 
   private def home_intro_section
     section id: "home-intro" do

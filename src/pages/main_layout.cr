@@ -30,7 +30,7 @@ abstract class MainLayout
       end
 
       body do
-        layout_header "ma", blog: "/blog"
+        layout_header "ma", blog: Posts::Index
         render_flash
         div id: "content-container" do
           inner

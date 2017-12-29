@@ -1,4 +1,4 @@
-module Blog::Comments::Components
+module Posts::Comments::Components
   # From: https://github.com/artsy/artsy.github.io/blob/source/_includes/gh_comments.html
   private def comments(comment_id)
     section id: "comments"

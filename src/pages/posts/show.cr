@@ -1,5 +1,5 @@
-class Blog::ShowPage < MainLayout
-  include Blog::Comments::Components
+class Posts::ShowPage < MainLayout
+  include Posts::Comments::Components
   needs post : Post
 
   def inner

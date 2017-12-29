@@ -1,4 +1,4 @@
-class Blog::Posts::New < AdminAction
+class Posts::New < AdminAction
   action do
     render post_form: PostForm.new
   end

@@ -1,4 +1,4 @@
-module Blog::Latest::Components
+module Posts::Latest::Components
   private def latest_posts
     div class: "latest-posts-container" do
       posts = PostQuery.new

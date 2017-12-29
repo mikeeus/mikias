@@ -1,6 +1,6 @@
 require "markdown"
 
-module Blog::Posts::Components
+module Posts::Components
   private def full_post(post : Post)
     h1 post.title
     raw post.content

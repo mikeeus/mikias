@@ -10,7 +10,7 @@ module Layout::Header::Components
             end
           end
           li do
-            link "+ post", to: "/blog/posts/new", class: "m-button"
+            link "+ post", to: Posts::New, class: "m-button"
           end
         end
       end

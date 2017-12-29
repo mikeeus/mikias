@@ -1,6 +1,6 @@
-class Blog::IndexPage < MainLayout
-  include Blog::Posts::Components
-  include Blog::Comments::Components
+class Posts::IndexPage < MainLayout
+  include Posts::Components
+  include Posts::Comments::Components
   needs posts : Array(Post)
 
   def inner
