@@ -4,7 +4,7 @@ class Blog::Posts::Create < AdminAction
       if post
         redirect Blog::Index
       else
-        flash.now "error", "#{pp form.errors}"
+        # flash.now "error", "#{pp form.errors}"
         render Blog::Posts::NewPage, post_form: form
       end
     end
