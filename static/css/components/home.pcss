@@ -94,6 +94,22 @@
 #home-intro {
   font-size: 20px;
   padding: 75px 15px 150px;
+  @media (--lt-md) {
+    .contact {
+      display: none;
+    }
+  }
+  @media (--gt-sm) {
+    display: flex;
+    .contact {
+      margin: auto;
+      align-self: center;
+      strong {
+        color: var(--primary);
+      }
+    }
+  }
+
   ul {
     margin: 0;
     padding: 0;

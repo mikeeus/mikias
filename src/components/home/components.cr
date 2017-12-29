@@ -7,38 +7,18 @@ module Home::Components
       ul do
         li do
           material_icon("whatshot")
-          strong "Passionate"
-          text " about pushing my limits and learning."
-        end
-        li do
-          material_icon("memory")
-          strong "Fascinated"
-          text " by the power of technology to solve problems."
+          strong "Passionate,"
+          text " about technology self improvement."
         end
         li do
           material_icon("alarm_on")
-          strong "Self motivated"
-          text ", I don't need a reason to crush it daily."
+          strong "Self motivated,"
+          text " to push myself and grow daily."
         end
-        # self motivated
         li do
           material_icon("hotel")
-          strong "Sleep 4.5 hours"
-          text " a day, "
-          strong "learn"
-          text " and "
-          strong "hack"
-          text " the rest."
-        end
-        li do
-          material_icon("computer")
-          text "Currently building in "
-          strong "Typescript"
-          text ", "
-          strong "Ruby"
-          text " and "
-          strong "Crystal"
-          text "."
+          strong "Polyphasic sleeper,"
+          text " not afraid to test the 'limits'."
         end
         li do
           material_icon("flight")
@@ -47,6 +27,11 @@ module Home::Components
           text " or "
           strong "Addis Ababa."
         end
+      end
+
+      div class: "contact" do
+        text "Get in touch: "
+        strong "hello@mikias.net"
       end
     end
   end
