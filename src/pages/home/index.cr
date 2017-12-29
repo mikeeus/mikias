@@ -2,7 +2,11 @@ class Home::IndexPage < MainLayout
   include Home::Components
 
   def inner_head
-    css_link asset("css/octicons.min.css")
+    if Lucky::Env.production?
+      css_link "//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css"
+    else
+      css_link asset("css/octicons.min.css")
+    end
     css_link asset("css/github-activity-0.1.5.min.css")
     js_link asset("js/mustache.min.js")
     js_link asset("js/github-activity-0.1.5.min.js")
