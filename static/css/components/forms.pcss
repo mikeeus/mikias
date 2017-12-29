@@ -1,6 +1,20 @@
+@import '../mixins/**.pcss';
+@import '../variables/**.pcss';
+
 .form-container {
-  width: 80%;
-  margin: auto;
+  @media (--xs) {
+    width: 100%;
+    .form-row {
+      label {
+        font-size: 13px;
+        font-weight: bold;
+      }
+    }
+  }
+  @media (--gt-xs) {
+    width: 80%;
+    margin: auto;
+  }
   max-width: 500px;
   padding: 15px;
   box-sizing: border-box;
@@ -13,6 +27,8 @@
     flex-direction: row;
     label {
       margin-right: 15px;
+      margin-right: 10px;
+      width: 105px;
     }
   }
   .form-col {
