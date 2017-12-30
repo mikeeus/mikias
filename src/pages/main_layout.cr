@@ -26,6 +26,10 @@ abstract class MainLayout
         css_link asset("css/app.css")
         js_link asset("js/app.js")
         js_link asset("js/jquery-3.2.1.min.js")
+        js_link asset("js/highlight.pack.js")
+        script do
+          raw "hljs.initHighlightingOnLoad();"
+        end
         inner_head
       end
 

@@ -4,6 +4,7 @@
 /* Uncomment these when you add files to variables, mixins or components */
 
 @import "variables/**.pcss";
+@import "misc/**.pcss";
 @import "mixins/**.pcss";
 @import "components/**.pcss";
 /* For example, add `static/css/components/btn.pcss` and uncomment the next line */
@@ -17,6 +18,10 @@ body {
   font-family: 'Dosis', 'Helvetica', 'sans-serif';
   color: var(--grey8);
   font-size: 20px;
+}
+
+code * {
+  font-family: 'Fira Mono', monospace, sans-serif;
 }
 
 a, a:visited, a.visited {

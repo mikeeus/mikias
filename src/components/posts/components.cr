@@ -18,7 +18,7 @@ module Posts::Components
   end
 
   private def post_preview(post : Post)
-    div class: "post-preview" do
+    link to: Posts::Show.path(id: post.slug), class: "post-preview" do
       header do
         h2 post.title
       end
