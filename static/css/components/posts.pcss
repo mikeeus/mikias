@@ -1,62 +1,64 @@
 @import "../variables/**.pcss";
 @import "../mixins/**.pcss";
 
-.post-preview {
-  .post-preview-footer {
-    margin-top: 15px;
-    text-align: right;
-    font-weight: bold;
-    color: #9E9E9E;
+/* POSTS INDEX */
+#posts-index {
+  padding: 30px;
+  max-width: 750px;
+  margin: auto;
+  .post-preview {
+    margin-bottom: 50px;
   }
 }
 
-.post-editor label {
-  padding: 10px 0;
+/* PREVIEW */
+.post-preview {
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  &:hover {
+    box-shadow: 0px 1px 3px 0 var(--grey5);
+    border-radius: 5px;
+  }
+  .post-preview-body {
+    font-size: 20px;
+  }
+  header {}
+  .push {
+    flex: 1;
+  }
+  footer {
+    margin-top: 15px;
+    font-weight: bold;
+    color: $grey7;
+    display: flex;
+    justify-content: space-between;
+    .post-preview-date {
+      text-align: right;
+    }
+    i.material-icons {
+      color: white;
+      padding: 0 10px;
+      border-radius: 4px;
+      background: var(--accent);
+    }
+  }
 }
 
-.post-editor textarea, .post-editor input {
-  border: 1px solid var(--grey5);
-  border-radius: 2px;
-  margin-bottom: 10px;
-}
-
+/* LATEST POSTS */
 .latest-posts-container {
   display: flex;
-  flex-flow: wrap;
+  flex-flow: row wrap;
   justify-content: space-around;
   .latest-post {
-    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
-    border: 1px solid #abb4bb38;
-    padding: 15px;
-    margin: 10px;
-    position: relative;
-    padding-bottom: 40px;
-    h2 {
-      color: var(--primary);
-      cursor: pointer;
-      &:hover {
-        color: var(--secondary);
-        transition: all 100ms ease-in-out;
-      }
-    }
-    .header {
-      text-align: right;
-      color: var(--grey6);
-    }
-    p {
-      color: var(--grey8);
-    }
-    .material-icons {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      cursor: pointer;
-      padding: 0 10px;
-      transition: all 100ms ease-in-out;
-      &:hover {
-        color: white;
-        background: var(--secondary);
+    margin: 15px;
+    .post-preview {
+      height: 100%;
+      box-sizing: border-box;
+      header h2 {
+        font-size: 28px;
       }
     }
   }
@@ -80,3 +82,12 @@
   }
 }
 
+/* FORMS */
+.post-editor label {
+  padding: 10px 0;
+}
+.post-editor textarea, .post-editor input {
+  border: 1px solid var(--grey5);
+  border-radius: 2px;
+  margin-bottom: 10px;
+}

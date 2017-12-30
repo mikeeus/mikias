@@ -14,8 +14,9 @@ html, body{
 }
 body {
   margin: 0;
-  font-family: 'Comfortaa', 'Helvetica', 'sans-serif';
+  font-family: 'Dosis', 'Helvetica', 'sans-serif';
   color: var(--grey8);
+  font-size: 20px;
 }
 
 a, a:visited, a.visited {

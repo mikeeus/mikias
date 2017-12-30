@@ -4,8 +4,10 @@ class Posts::IndexPage < MainLayout
   needs posts : Array(Post)
 
   def inner
-    @posts.each do |post|
-      post_preview(post)
+    div id: "posts-index" do
+      @posts.each do |post|
+        post_preview(post)
+      end
     end
   end
 end

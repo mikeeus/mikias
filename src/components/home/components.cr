@@ -2,7 +2,7 @@ require "../posts/**"
 
 module Home::Components
   include Github::Components
-  include Posts::Latest::Components
+  include Posts::Components
 
   private def home_intro_section
     section id: "home-intro" do
