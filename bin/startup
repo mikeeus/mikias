@@ -1,0 +1,38 @@
+#!/bin/bash -e
+
+set -e
+
+# The name of the instance is also the name of the app. Change to suite
+# your needs.
+APPNAME=$HOSTNAME
+
+# Add or reset swap
+if [ ! -f /swapfile ]; then
+  sudo fallocate -l 1G /swapfile
+  sudo chmod 600 /swapfile
+  sudo mkswap /swapfile
+fi
+sudo swapoff -a
+sudo swapon /swapfile
+
+# Install packages
+yarn
+bin/build
+
+lucky db.create
+lucky db.migrate
+
+# app systemd service
+if [ ! -f /lib/systemd/system/$APPNAME.service ]; then
+  cp .gce/$APPNAME.service /lib/systemd/system/$APPNAME.service
+fi
+sudo systemctl enable $APPNAME.service
+sudo systemctl start $APPNAME.service
+
+# configure nginx
+sudo cp .gce/default.nginx /etc/nginx/sites-enabled/default
+sudo systemctl restart nginx.service
+
+# ensure certbot renewal is scheduled
+bin/schedule_cert_renewal
+bin/reset_swap
