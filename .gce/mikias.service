@@ -1,0 +1,15 @@
+[Unit]
+Description=Mikias
+After=network.target
+
+[Service]
+Environment="LUCKY_ENV=production"
+Environment="APP_DOMAIN=mikias.net"
+Environment="PATH=/home/itsmikias/.libs/crystal/bin:/bin:/usr/bin"
+User=itsmikias
+WorkingDirectory=/home/itsmikias/mikias
+ExecStart=/home/itsmikias/mikias/app
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

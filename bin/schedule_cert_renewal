@@ -1,0 +1,4 @@
+LINE='include "47 4,16   * * *   root   certbot renew --quiet --renew-hook \"service nginx reload\""'
+FILE=/etc/crontab
+
+add_text_to_file $LINE $FILE
